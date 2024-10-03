@@ -29,7 +29,7 @@ function Home() {
                 variants={container(0.5)}
                 initial="hidden"
                 animate="visible"
-                className="pb-16 text-4xl font-bold tracking-tight text-center mt-4 lg:mt-16 lg:text-5xl"
+                className="pb-16 pt-12 text-4xl font-bold tracking-tight text-center mt-4 lg:mt-16 lg:text-5xl"
               >
                 Ashwini Thikole
               </motion.h1>
@@ -56,11 +56,11 @@ function Home() {
               <motion.div
                 initial={{ x: 100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1,delay:0 }}
+                transition={{ duration: 1, delay: 0 }}
                 className="rounded-3xl h-full [background:radial-gradient(95%_95%_at_50%_10%,#fff_0%,#63e_95%)]"
               >
                 <img
-                  className="rounded-3xl h-96"
+                  className="rounded-3xl h-80 lg:h-96"
                   src={img}
                   alt="Ashwini Thikole"
                 />
