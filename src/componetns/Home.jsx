@@ -29,7 +29,7 @@ function Home() {
                 variants={container(0.5)}
                 initial="hidden"
                 animate="visible"
-                className="pb-20 pt-12 text-4xl font-bold tracking-tight text-center mt-4 lg:mt-16 lg:text-5xl"
+                className="pb-24 pt-12 text-4xl font-bold tracking-tight text-center mt-4 lg:mt-16 lg:text-5xl"
               >
                 Ashwini Thikole
               </motion.h1>
