@@ -12,7 +12,7 @@ export const EDUCATION = [
     institute: "Government College of Engineering and Research Avasari Khurd.",
     board: "Savitribai Phule Pune University",
     side: "Computer Engineering",
-    p: "9.82",
+    p: "9.82 CGPA",
   },
   {
     year: "2020 - 2023",
@@ -56,7 +56,7 @@ export const PROJECTS = [
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["HTML", "CSS", "React", "Telwindcss"],
-    viewdemo: `https://ashuthikole2004.github.io/Portfolio/`,
+    viewdemo: `https://portfolio-alpha-one-22.vercel.app/`,
   },
   {
     title: "MKSSS",

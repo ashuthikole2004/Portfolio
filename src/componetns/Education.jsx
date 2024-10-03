@@ -24,7 +24,7 @@ function Education() {
 
                   <p className="mb-4 text-neutral-400">
                     <span className="w mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800">
-                      {item.p}
+                     Score:  {item.p}
                     </span>
                   </p>
                 </div>
