@@ -23,13 +23,13 @@ function Home() {
       <div id="Home" className="border-b border-neutral-900 pb-1 lg:mb-35">
         {/* Use flex-col-reverse for smaller screens to bring the photo on top */}
         <div className="flex flex-col-reverse lg:flex-row justify-items-stretch">
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2  lg:ml-20">
             <div className="flex flex-col lg:items-start pl-4">
               <motion.h1
                 variants={container(0.5)}
                 initial="hidden"
                 animate="visible"
-                className="pb-16 text-4xl font-bold tracking-tight text-center mt-4 lg:mt-16 lg:text-8xl"
+                className="pb-16 text-4xl font-bold tracking-tight text-center mt-4 lg:mt-16 lg:text-5xl"
               >
                 Ashwini Thikole
               </motion.h1>
@@ -60,7 +60,7 @@ function Home() {
                 className="rounded-3xl h-full [background:radial-gradient(95%_95%_at_50%_10%,#fff_0%,#63e_95%)]"
               >
                 <img
-                  className="rounded-3xl h-full"
+                  className="rounded-3xl h-96"
                   src={img}
                   alt="Ashwini Thikole"
                 />

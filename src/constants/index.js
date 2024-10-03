@@ -33,6 +33,36 @@ export const EDUCATION = [
   },
 ];
 
+export const EXPERIENCE = [
+  {
+    year: "Jul 2022 - Aug 2022",
+    company: "Open Interface Software Solution Pvt. Ltd.",
+    domain: "Web Development",
+    project: {
+      name: "Car Rental System",
+      technologies: ["php", "html", "css", "js", "mysql"],
+    },
+  },
+  {
+    year: "Oct 2023 - Nov 2023",
+    company: "Technohacks",
+    domain: "Web Development",
+    project: {
+      name: "Portfolio",
+      technologies: ["reactjs","telwindcss", "html", "css", "js"],
+    },
+  },
+  {
+    year: "Feb 2024 - Mar 2024",
+    company: "Codesoft",
+    domain: "Web Development",
+    project: {
+      name: "Music Search Web",
+      technologies: ["js","html", "css"],
+    },
+  },
+];
+
 export const PROJECTS = [
   {
     title: "Image Search Web",
