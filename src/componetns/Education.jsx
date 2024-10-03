@@ -1,13 +1,28 @@
 import { EDUCATION } from "../constants";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Education() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000, // Changes slide every 3 seconds
+    pauseOnHover: true, // Pauses the carousel on hover
+    arrows: true, // Display arrows for manual scrolling
+  };
+
   return (
     <>
       <div id="Education" className="border-b border-neutral-900 pb-4">
         <h1 className="my-20 text-center text-4xl">Education</h1>
-        <div>
-          {EDUCATION.map((item) => (
-            <div key={item}>
+        <Slider {...settings}>
+          {EDUCATION.map((item, index) => (
+            <div key={index}>
               <div className="flex justify-around flex-wrap lg:justify-center mb-8">
                 <div className="w-full lg:w-1/4">
                   <p className="mb-2 text-sm text-neutral-400">{item.year}</p>
@@ -21,17 +36,16 @@ function Education() {
                     Institute: {item.institute}
                   </p>
                   <p className="mb-4 text-neutral-400">Board: {item.board}</p>
-
                   <p className="mb-4 text-neutral-400">
                     <span className="w mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800">
-                     Score:  {item.p}
+                      Score: {item.p}
                     </span>
                   </p>
                 </div>
               </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </>
   );
