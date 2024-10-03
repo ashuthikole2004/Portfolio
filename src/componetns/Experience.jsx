@@ -17,7 +17,7 @@ function Experience() {
               <p className="mt-4 text-center">Company: {item.company}</p>
               <p>Domain: {item.domain}</p>
               <p>Project: {item.project.name}</p>
-              <p className="mt-3 flex gap-3 text-center">
+              <p className="mt-3 flex gap-3 text-center flex-wrap">
                 {item.project.technologies.map((item1) => (
                   <div className="w mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800">
                     {item1}
