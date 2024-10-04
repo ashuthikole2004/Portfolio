@@ -5,12 +5,19 @@ function Experience() {
   return (
     <>
       <div id="Experience" className="border-b border-neutral-900 pb-4">
-        <h1 className="my-20 text-center text-4xl">Experience</h1>
+        <motion.h1
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1 }}
+          className="my-20 text-center text-4xl"
+        >
+          Experience
+        </motion.h1>
         <div className="flex justify-center flex-wrap flex-row items-center gap-10">
           {EXPERIENCE.map((item) => (
             <motion.div
-              whileHover={{ scale: 0.9 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.5 }}
               className="flex flex-col justify-center items-center shadow shadow-gray-50 h-[250px] w-[390px]"
             >
               <p className="font-bold">{item.year}</p>
@@ -33,10 +40,3 @@ function Experience() {
 }
 
 export default Experience;
-// year: "Jul 2022 - Aug 2022",
-//     company: "Open Interface Software Solution Pvt. Ltd.",
-//     domain: "Web Development",
-//     project: {
-//       name: "Car Rental System",
-//       technologies: ["php", "html", "css", "js", "mysql"],
-//     },

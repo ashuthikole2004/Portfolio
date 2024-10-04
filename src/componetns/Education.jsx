@@ -2,6 +2,7 @@ import { EDUCATION } from "../constants";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
 
 function Education() {
   const settings = {
@@ -18,8 +19,15 @@ function Education() {
 
   return (
     <>
-      <div id="Education" className="border-b border-neutral-900 pb-4">
-        <h1 className="my-20 text-center text-4xl">Education</h1>
+      <div id="Education" className="border-b border-neutral-900 pb-4 lg:m-24">
+        <motion.h1
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1 }}
+          className="my-20 text-center text-4xl"
+        >
+          Education
+        </motion.h1>
         <Slider {...settings}>
           {EDUCATION.map((item, index) => (
             <div key={index}>

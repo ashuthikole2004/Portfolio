@@ -13,7 +13,14 @@ function Technologies() {
   return (
     <>
       <div id="Technologies" className="border-b border-neutral-800 pb-24">
-        <h1 className="my-20 text-center text-4xl">Technologies</h1>
+        <motion.h1
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1 }}
+          className="my-20 text-center text-4xl"
+        >
+          Technologies
+        </motion.h1>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <motion.div
             whileHover={{ scale: 1.1 }}
