@@ -18,7 +18,7 @@ function Experience() {
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.5 }}
-              className="flex flex-col justify-center items-center shadow shadow-gray-50 h-[250px] w-[390px]"
+              key={item} className="flex flex-col justify-center items-center shadow shadow-gray-50 h-[250px] w-[390px]"
             >
               <p className="font-bold">{item.year}</p>
               <p className="mt-4 text-center">Company: {item.company}</p>
@@ -26,7 +26,7 @@ function Experience() {
               <p>Project: {item.project.name}</p>
               <p className="mt-3 flex gap-3 text-center items-center justify-center flex-wrap">
                 {item.project.technologies.map((item1) => (
-                  <div className="w mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800">
+                  <div key={item1} className="w mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-800">
                     {item1}
                   </div>
                 ))}

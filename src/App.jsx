@@ -1,29 +1,50 @@
+import { useEffect } from "react";
 import Contact from "./componetns/Contact";
-import Container from "./componetns/Container";
 import Education from "./componetns/Education";
 import Experience from "./componetns/Experience";
 import Home from "./componetns/Home";
-import Navbar from "./componetns/Navbar";
 import Projects from "./componetns/Projects";
 import Technologies from "./componetns/Technologies";
 
 function App() {
+  useEffect(() => {
+    // Function to handle scrolling with offset for fixed navbar
+    const handleAnchorScroll = (e) => {
+      if (e.target.tagName === "A" && e.target.getAttribute("href").startsWith("#")) {
+        e.preventDefault();
+        const targetId = e.target.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        const navbarHeight = 80; // Same as the height of the fixed navbar (h-20 in Tailwind)
+
+        if (targetElement) {
+          const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - navbarHeight;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth", // Smooth scrolling effect
+          });
+        }
+      }
+    };
+
+    // Attach the event listener
+    document.addEventListener("click", handleAnchorScroll);
+
+    // Clean up the event listener
+    return () => {
+      document.removeEventListener("click", handleAnchorScroll);
+    };
+  }, []);
+
   return (
-    <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-cyan-900 selection:text-cyan-900">
-      <div className="fixed top-0 -z-10 h-full w-full">
-        <div className="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-      </div>
-      <div className="container mx-auto px-8">
-        <Container>
-          <Navbar></Navbar>
-          <Home></Home>
-          <Technologies></Technologies>
-          <Projects></Projects>
-          <Experience></Experience>
-          <Education></Education>
-          <Contact></Contact>
-        </Container>
-      </div>
+    <div>
+      <Home id="Home"></Home>
+      <Technologies id="Technologies"></Technologies>
+      <Projects id="Projects"></Projects>
+      <Experience id="Experience"></Experience>
+      <Education id="Education"></Education>
+      <Contact id="Contacts"></Contact>
     </div>
   );
 }

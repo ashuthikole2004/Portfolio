@@ -19,7 +19,7 @@ function Education() {
 
   return (
     <>
-      <div id="Education" className="border-b border-neutral-900 pb-4 lg:m-24">
+      <div id="Education" className="border-b border-neutral-900 pb-4 lg:m-24 m-5">
         <motion.h1
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
