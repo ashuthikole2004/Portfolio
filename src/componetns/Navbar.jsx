@@ -18,7 +18,7 @@ function Navbar() {
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
           <div className="flex items-center">
             <a href="#Home">
-              <img className="h-16 w-16" src={image} alt="logo" />
+              <img className="h-12 w-12" src={image} alt="logo" />
             </a>
           </div>
 
