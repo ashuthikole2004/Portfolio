@@ -5,6 +5,7 @@ import Experience from "./componetns/Experience";
 import Home from "./componetns/Home";
 import Projects from "./componetns/Projects";
 import Technologies from "./componetns/Technologies";
+import Certificates from "./componetns/Certificates";
 
 function App() {
   useEffect(() => {
@@ -44,6 +45,7 @@ function App() {
       <Projects id="Projects"></Projects>
       <Experience id="Experience"></Experience>
       <Education id="Education"></Education>
+      <Certificates id="Certificates"></Certificates>
       <Contact id="Contacts"></Contact>
     </div>
   );

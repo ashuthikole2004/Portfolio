@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import image from "../assets/image.png"; // Update with your logo path
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import { FaSquareInstagram } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,51 +14,9 @@ function Navbar() {
 
   return (
     <>
-      {/* Fixed Navbar */}
-      <nav className="fixed top-0 left-0 w-full bg-black shadow-md z-50 pl-32 pr-32">
+      <nav className="fixed top-0 left-0 w-full bg-black shadow-md z-50 pl-20 pr-20">
         <div className="container mx-auto flex justify-between items-center py-4 px-6">
-          <div className="flex items-center">
-            <a href="#Home">
-              <img className="h-12 w-12" src={image} alt="logo" />
-            </a>
-          </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden sm:flex space-x-4 text-white">
-            <a className="hover:text-blue-400" href="#Home">
-              Home
-            </a>
-            <a className="hover:text-blue-400" href="#Technologies">
-              Technologies
-            </a>
-            <a className="hover:text-blue-400" href="#Projects">
-              Projects
-            </a>
-            <a className="hover:text-blue-400" href="#Experience">
-              Experience
-            </a>
-            <a className="hover:text-blue-400" href="#Education">
-              Education
-            </a>
-            <a className="hover:text-blue-400" href="#Contacts">
-              Contact
-            </a>
-          </div>
-
-          {/* Social Media Icons */}
-          <div className="hidden sm:flex gap-2 text-white text-2xl">
-            <a href="https://github.com/ashuthikole2004">
-              <IoLogoGithub />
-            </a>
-            <a href="https://www.linkedin.com/in/ashwini-thikole-27a50b291">
-              <IoLogoLinkedin />
-            </a>
-            <a href="https://www.instagram.com/__ashu_2004__/">
-              <FaSquareInstagram />
-            </a>
-          </div>
-
-          {/* Mobile Menu Button */}
+          {/* Hamburger button for small screens */}
           <div className="sm:hidden">
             <button onClick={toggleMenu} className="text-white">
               <svg
@@ -75,10 +34,55 @@ function Navbar() {
               </svg>
             </button>
           </div>
+
+          {/* Flex order for small screens, logo on the right */}
+          <div className="flex items-center sm:order-none order-last">
+            <Link to="/">
+              <img className="h-12 w-12" src={image} alt="logo" />
+            </Link>
+          </div>
+
+          {/* Links for larger screens */}
+          <div className="hidden sm:flex space-x-4 text-white">
+            <Link className="hover:text-blue-400" to="/">
+              Home
+            </Link>
+            <Link className="hover:text-blue-400" to="Technologies">
+              Technologies
+            </Link>
+            <Link className="hover:text-blue-400" to="Projects">
+              Projects
+            </Link>
+            <Link className="hover:text-blue-400" to="Experience">
+              Experience
+            </Link>
+            <Link className="hover:text-blue-400" to="Education">
+              Education
+            </Link>
+            <Link className="hover:text-blue-400" to="Certificates">
+              Certificates
+            </Link>
+            <Link className="hover:text-blue-400" to="Contact">
+              Contact
+            </Link>
+          </div>
+
+          {/* Social icons for larger screens */}
+          <div className="hidden sm:flex gap-2 text-white text-2xl">
+            <a href="https://github.com/ashuthikole2004">
+              <IoLogoGithub />
+            </a>
+            <a href="https://www.linkedin.com/in/ashwini-thikole-27a50b291">
+              <IoLogoLinkedin />
+            </a>
+            <a href="https://www.instagram.com/__ashu_2004__/">
+              <FaSquareInstagram />
+            </a>
+          </div>
         </div>
       </nav>
 
-      {/* Sidebar Menu */}
+      {/* Mobile menu */}
       <div
         className={`fixed top-0 left-0 h-full w-2/3 bg-gray-900 bg-opacity-55 text-white p-5 transition-transform transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
@@ -91,48 +95,55 @@ function Navbar() {
           </button>
         </div>
         <div className="flex flex-col gap-4">
-          <a
+          <Link
             onClick={toggleMenu}
-            href="#Home"
+            to="/"
             className="hover:bg-gray-700 p-2 rounded-md"
           >
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             onClick={toggleMenu}
-            href="#Technologies"
+            to="Technologies"
             className="hover:bg-gray-700 p-2 rounded-md"
           >
             Technologies
-          </a>
-          <a
+          </Link>
+          <Link
             onClick={toggleMenu}
-            href="#Projects"
+            to="Projects"
             className="hover:bg-gray-700 p-2 rounded-md"
           >
             Projects
-          </a>
-          <a
+          </Link>
+          <Link
             onClick={toggleMenu}
-            href="#Experience"
+            to="Experience"
             className="hover:bg-gray-700 p-2 rounded-md"
           >
             Experience
-          </a>
-          <a
+          </Link>
+          <Link
             onClick={toggleMenu}
-            href="#Education"
+            to="Education"
             className="hover:bg-gray-700 p-2 rounded-md"
           >
             Education
-          </a>
-          <a
+          </Link>
+          <Link
             onClick={toggleMenu}
-            href="#Contacts"
+            to="Certificates"
+            className="hover:bg-gray-700 p-2 rounded-md"
+          >
+            Certificates
+          </Link>
+          <Link
+            onClick={toggleMenu}
+            to="Contact"
             className="hover:bg-gray-700 p-2 rounded-md"
           >
             Contact
-          </a>
+          </Link>
 
           <div className="flex justify-center gap-4 mt-4 text-2xl">
             <a href="https://github.com/ashuthikole2004">

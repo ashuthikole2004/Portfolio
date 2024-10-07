@@ -10,6 +10,7 @@ import Projects from "./componetns/Projects.jsx";
 import Experience from "./componetns/Experience.jsx";
 import Education from "./componetns/Education.jsx";
 import Contact from "./componetns/Contact.jsx";
+import Certificates from "./componetns/Certificates.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,27 +22,31 @@ const router = createBrowserRouter([
         element: <App></App>,
       },
       {
-        path: "home",
+        path: "/",
         element: <Home></Home>,
       },
       {
-        path: "technologies",
+        path: "Technologies",
         element: <Technologies></Technologies>,
       },
       {
-        path: "projects",
+        path: "Projects",
         element: <Projects></Projects>,
       },
       {
-        path: "experience",
+        path: "Experience",
         element: <Experience></Experience>,
       },
       {
-        path: "education",
+        path: "Education",
         element: <Education></Education>,
       },
       {
-        path: "contact",
+        path: "Certificates",
+        element: <Certificates></Certificates>,
+      },
+      {
+        path: "Contact",
         element: <Contact></Contact>,
       },
     ],
